@@ -1,7 +1,5 @@
-/* eslint-disable no-restricted-globals */
-/* eslint-disable react/prop-types */
-/* eslint-disable react/no-array-index-key */
 import React from 'react';
+import PropTypes from 'prop-types';
 import { FaEdit, FaWindowClose } from 'react-icons/fa';
 
 export default function Tarefas({ tarefas, handleEdit, handleDelete }) {
@@ -23,3 +21,9 @@ export default function Tarefas({ tarefas, handleEdit, handleDelete }) {
     </>
   );
 }
+
+Tarefas.propTypes = {
+  tarefas: PropTypes.array.isRequired,
+  handleEdit: PropTypes.func.isRequired,
+  handleDelete: PropTypes.func.isRequired,
+};
